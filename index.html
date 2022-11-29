@@ -11,7 +11,7 @@
         <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 
         <!--=============== SWIPER CSS ===============-->
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
 
         <!--=============== CSS ===============-->
         <link rel="stylesheet" href="assets/css/styles.css">
@@ -441,10 +441,10 @@
                 <span class="section__subtitle">Most recent work</span>
 
                 <div class="container section__border">
-                    <div class="projects__container">
-                        <div>
+                    <div class="projects__container swiper">
+                        <div class="swiper-wrapper">
                             <!-- Project 1 -->
-                            <div class="projects__content">
+                            <div class="projects__content swiper-slide">
                                 <img src="assets/img/project1.jpg" alt="projects image">
 
                                 <div>
@@ -458,7 +458,7 @@
                             </div>
 
                             <!-- Project 2 -->
-                            <div class="projects__content">
+                            <div class="projects__content swiper-slide">
                                 <img src="assets/img/project2.jpg" alt="projects image">
 
                                 <div>
@@ -472,7 +472,7 @@
                             </div>
 
                             <!-- Project 3 -->
-                            <div class="projects__content">
+                            <div class="projects__content swiper-slide">
                                 <img src="assets/img/project3.jpg" alt="projects image" class="projects__img">
 
                                 <div>
@@ -486,6 +486,17 @@
                             </div>
 
                         </div>
+
+                        <!-- Swiper arrows -->
+                        <div class="swiper-button-next">
+                            <i class="ri-arrow-right-s-line"></i>
+                        </div>
+                        <div class="swiper-button-prev">
+                            <i class="ri-arrow-left-s-line"></i>
+                        </div>
+
+                        <!-- Swiper pagination -->
+                        <div class="swiper-pagination"></div>
                     </div>
                 </div>
             </section>
@@ -497,7 +508,55 @@
 
             <!--==================== CONTACT ====================-->
             <section class="contact section" id="contact">
+                <h2 class="section__title">Contact Me</h2>
+                <span class="section__subtitle">Get in touch</span>
+                <div class="contact__container container grid section__border">
+                    <div class="contact__content">
+                        <h3 class="contact__title">
+                            <i class="ri-chat-3-line"></i> Reach Out
+                        </h3>
+                        <div class="contact__info">
+                            <div class="contact__data">
+                                <span class="contact__data-title">Email</span>
+                                <span class="contact__data-info">hasan.jessa@gmail.com</span>
+                            </div>
+                            <div class="contact__data">
+                                <span class="contact__data-title">WhatsApp</span>
+                                <span class="contact__data-info">+1 (972) 741-8455</span>
+                                <a href="https://api.whatsapp.com/send?phone=19727418455&text=Hello, more information!" target="_blank" class="contact__button">
+                                    Write me <i class="ri-arrow-right-line"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
 
+                    <div class="contact__content">
+                        <h3 class="contact__title">
+                            <i class="ri-send-place-line"></i> Write me your project
+                        </h3>
+
+                        <form action="" class="contact__form" id="contact-form">
+                            <div class="contact__form-div">
+                                <label class="contact__form-tag">Name</label>
+                                <input type="text" name="user_name" id="contact-name" required placeholder="Write your name" class="contact__form-input">
+                            </div>
+                            <div class="contact__form-div">
+                                <label class="contact__form-tag">Mail</label>
+                                <input type="text" name="user_email" id="contact-email" required placeholder="Write your email" class="contact__form-input">
+                            </div>
+                            <div class="contact__form-div">
+                                <label class="contact__form-tag">Project</label>
+                                <textarea type="text" name="user_project" id="contact-project" required placeholder="Write your project" class="contact__form-input"></textarea>
+                            </div>
+
+                            <p class="contact__message" id="contact-message">Message</p>
+
+                            <button class="contact__button" type="submit">
+                                Submit <i class="ri-arrow-right-up-line"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
             </section>
         </main>
 
@@ -514,9 +573,10 @@
         <script src=""></script>
 
         <!--=============== SWIPER JS ===============-->
-        <script src=""></script>
+        <script src="assets/js/swiper-bundle.min.js"></script>
 
         <!--=============== EMAIL JS ===============-->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
 
         <!--=============== MAIN JS ===============-->
